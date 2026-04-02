@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const nodes = [
   { id: "customer", label: "Customer", sublabel: "Booking & requests", color: "bg-blue-50 border-blue-200 text-blue-700" },
-  { id: "platform", label: "Platform OS", sublabel: "Orchestration engine", color: "bg-primary/5 border-primary/20 text-primary", highlight: true },
+  { id: "platform", label: "Usta OS", sublabel: "Orchestration engine", color: "bg-primary/5 border-primary/20 text-primary", highlight: true },
   { id: "technician", label: "Technician", sublabel: "Dispatch & execution", color: "bg-emerald-50 border-emerald-200 text-emerald-700" },
   { id: "payment", label: "Payment", sublabel: "Billing & invoicing", color: "bg-amber-50 border-amber-200 text-amber-700" },
   { id: "data", label: "Data Loop", sublabel: "Analytics & insights", color: "bg-violet-50 border-violet-200 text-violet-700" },
