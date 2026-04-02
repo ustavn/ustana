@@ -1,8 +1,8 @@
 const team = [
-  { name: "Sarah Chen", role: "CEO & Co-founder", bg: "bg-blue-100" },
-  { name: "Marcus Rivera", role: "CTO & Co-founder", bg: "bg-emerald-100" },
-  { name: "Aisha Patel", role: "VP Engineering", bg: "bg-amber-100" },
-  { name: "James Okonkwo", role: "VP Product", bg: "bg-violet-100" },
+  { name: "Linh Pham", role: "Co-founder", bg: "bg-blue-100" },
+  { name: "KC", role: "Co-founder", bg: "bg-emerald-100" },
+  { name: "Hien NT", role: "Co-founder", bg: "bg-amber-100" },
+  { name: "Vu Huynh", role: "Co-founder", bg: "bg-violet-100" },
 ];
 
 const Team = () => {
