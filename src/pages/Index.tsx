@@ -1,7 +1,9 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
+import PainPoints from "@/components/landing/PainPoints";
 import PlatformDiagram from "@/components/landing/PlatformDiagram";
 import FeatureGrid from "@/components/landing/FeatureGrid";
+import ProductScreenshots from "@/components/landing/ProductScreenshots";
 import Metrics from "@/components/landing/Metrics";
 import MarketSize from "@/components/landing/MarketSize";
 import Team from "@/components/landing/Team";
@@ -13,8 +15,10 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
+      <PainPoints />
       <PlatformDiagram />
       <FeatureGrid />
+      <ProductScreenshots />
       <Metrics />
       <MarketSize />
       <Team />

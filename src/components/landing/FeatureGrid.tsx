@@ -1,35 +1,35 @@
-import { Calendar, CreditCard, BarChart3, Users, Wrench, Shield } from "lucide-react";
+import { Send, Smartphone, CalendarDays, CreditCard, MessageSquare, BarChart3 } from "lucide-react";
 
 const features = [
   {
-    icon: Calendar,
-    title: "Smart Scheduling",
-    description: "AI-powered dispatch that optimizes routes, availability, and skill matching in real time.",
+    icon: Send,
+    title: "Smart Dispatch",
+    description: "Automatically assign technicians based on skill, location, and availability — no more dispatching through phone calls.",
   },
   {
-    icon: Users,
-    title: "Customer Portal",
-    description: "White-label booking experience with real-time tracking and automated communications.",
+    icon: Smartphone,
+    title: "Technician App",
+    description: "Technicians receive jobs, upload on-site photos, complete service checklists, and update job status in real time.",
   },
   {
-    icon: Wrench,
-    title: "Field Operations",
-    description: "Mobile-first tools for technicians with offline support, checklists, and photo capture.",
+    icon: CalendarDays,
+    title: "Booking Management",
+    description: "Track bookings, reschedules, cancellations, and technician assignments from one operational dashboard.",
   },
   {
     icon: CreditCard,
     title: "Payments & Invoicing",
-    description: "Integrated billing with flexible pricing models, automated invoicing, and payment processing.",
+    description: "Manage cash and online payments with automated invoices, receipts, and end-of-day reconciliation.",
+  },
+  {
+    icon: MessageSquare,
+    title: "Customer Communication",
+    description: "Send booking confirmations, reminders, and technician arrival updates over SMS and Zalo — automatically.",
   },
   {
     icon: BarChart3,
-    title: "Analytics Engine",
-    description: "Real-time dashboards with operational insights, revenue tracking, and performance metrics.",
-  },
-  {
-    icon: Shield,
-    title: "Compliance & Safety",
-    description: "Built-in regulatory compliance, safety checklists, and audit trails for every job.",
+    title: "Reports & Operations",
+    description: "Monitor job completion, technician performance, revenue, SLA compliance, and recurring maintenance contracts.",
   },
 ];
 
@@ -38,10 +38,10 @@ const FeatureGrid = () => {
     <section className="container mx-auto px-6 py-24">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">
-          Six modules. One platform.
+          Everything your AC service team needs
         </h2>
         <p className="text-muted-foreground">
-          Everything a service business needs to operate, built into a single cohesive system.
+          Practical tools for dispatchers, technicians, and operations managers — in one place.
         </p>
       </div>
 
