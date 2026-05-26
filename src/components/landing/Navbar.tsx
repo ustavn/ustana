@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="flex items-center gap-8">
           <span className="text-base font-bold tracking-widest text-foreground">USTA</span>
           <div className="hidden items-center gap-6 md:flex">
-            {["Platform", "Solutions", "Pricing", "Docs"].map((item) => (
+            {["Platform", "Dispatch", "Pricing", "Customers"].map((item) => (
               <a key={item} href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                 {item}
               </a>

@@ -1,8 +1,8 @@
 const metrics = [
-  { value: "2.4M+", label: "Jobs completed" },
-  { value: "98.7%", label: "Platform uptime" },
-  { value: "340+", label: "Enterprise clients" },
-  { value: "$1.2B", label: "Processed annually" },
+  { value: "120K+", label: "Service jobs dispatched" },
+  { value: "98%", label: "Jobs assigned within SLA" },
+  { value: "340+", label: "AC service teams" },
+  { value: "60%", label: "Fewer missed appointments" },
 ];
 
 const Metrics = () => {
@@ -11,10 +11,10 @@ const Metrics = () => {
       <div className="container mx-auto px-6 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">
-            Trusted at scale
+            Trusted by AC service operators
           </h2>
           <p className="text-muted-foreground">
-            Infrastructure that powers the operations behind industry leaders.
+            From single-shop repair businesses to multi-city HVAC operations.
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-8 lg:grid-cols-4">

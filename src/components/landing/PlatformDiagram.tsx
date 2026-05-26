@@ -1,11 +1,12 @@
-import { ArrowRight } from "lucide-react";
+import { CalendarCheck, Send, UserCheck, Wrench, CreditCard, LineChart, ArrowRight } from "lucide-react";
 
-const nodes = [
-  { id: "customer", label: "Customer", sublabel: "Booking & requests", color: "bg-blue-50 border-blue-200 text-blue-700" },
-  { id: "platform", label: "Usta OS", sublabel: "Orchestration engine", color: "bg-primary/5 border-primary/20 text-primary", highlight: true },
-  { id: "technician", label: "Technician", sublabel: "Dispatch & execution", color: "bg-emerald-50 border-emerald-200 text-emerald-700" },
-  { id: "payment", label: "Payment", sublabel: "Billing & invoicing", color: "bg-amber-50 border-amber-200 text-amber-700" },
-  { id: "data", label: "Data Loop", sublabel: "Analytics & insights", color: "bg-violet-50 border-violet-200 text-violet-700" },
+const steps = [
+  { icon: CalendarCheck, label: "Customer booking", desc: "Bookings come in from web, hotline, or Zalo into one queue." },
+  { icon: Send, label: "Smart dispatch", desc: "Assign the right technician by skill, location, and availability." },
+  { icon: UserCheck, label: "Technician accepts", desc: "Job appears on the mobile app with full customer and site details." },
+  { icon: Wrench, label: "On-site service", desc: "Checklists, photo proof, and parts logged from the field." },
+  { icon: CreditCard, label: "Payment collection", desc: "Cash or online — invoiced and reconciled automatically." },
+  { icon: LineChart, label: "Feedback & analytics", desc: "Track SLA, technician performance, and recurring maintenance." },
 ];
 
 const PlatformDiagram = () => {
@@ -14,54 +15,70 @@ const PlatformDiagram = () => {
       <div className="container mx-auto px-6 py-24">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">
-            How the platform works
+            How Usta runs your service operations
           </h2>
           <p className="text-muted-foreground">
-            A continuous loop from customer request to data-driven optimization.
+            From the first customer request to the final payment — one connected workflow.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 max-w-4xl">
-          {/* Desktop flow */}
-          <div className="hidden items-center justify-between md:flex">
-            {nodes.map((node, i) => (
-              <div key={node.id} className="flex items-center">
-                <div
-                  className={`rounded-xl border px-5 py-4 text-center shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-elevated)] ${node.color} ${node.highlight ? "ring-1 ring-primary/10" : ""}`}
-                >
-                  <p className="text-sm font-semibold">{node.label}</p>
-                  <p className="mt-1 text-xs opacity-70">{node.sublabel}</p>
+        <div className="mx-auto mt-16 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {steps.map((s, i) => (
+            <div key={s.label} className="relative rounded-xl border border-border bg-background p-5 shadow-[var(--shadow-card)]">
+              <div className="mb-3 flex items-center justify-between">
+                <div className="inline-flex rounded-lg bg-primary/5 p-2 text-primary">
+                  <s.icon className="h-4 w-4" />
                 </div>
-                {i < nodes.length - 1 && (
-                  <ArrowRight className="mx-3 h-4 w-4 shrink-0 text-muted-foreground/40" />
+                <span className="text-[11px] font-medium text-muted-foreground">Step {i + 1}</span>
+              </div>
+              <h3 className="mb-1.5 text-sm font-semibold text-foreground">{s.label}</h3>
+              <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+
+              {/* mini UI preview per step */}
+              <div className="rounded-md border border-border bg-secondary/60 p-2.5">
+                {i === 0 && (
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="font-medium text-foreground">AC cleaning · Apt 8F</span>
+                    <span className="rounded-full bg-blue-100 px-2 py-0.5 text-blue-700">New</span>
+                  </div>
+                )}
+                {i === 1 && (
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="text-muted-foreground">Suggested</span>
+                    <span className="font-medium text-foreground">Minh T. · 1.2 km</span>
+                  </div>
+                )}
+                {i === 2 && (
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="font-medium text-foreground">Hung P. accepted</span>
+                    <span className="text-emerald-600">✓ ETA 25m</span>
+                  </div>
+                )}
+                {i === 3 && (
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="text-muted-foreground">Checklist</span>
+                    <span className="font-medium text-foreground">6/7 · photos uploaded</span>
+                  </div>
+                )}
+                {i === 4 && (
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="text-muted-foreground">Invoice #INV-2041</span>
+                    <span className="font-medium text-foreground">₫ 1,250,000 · Paid</span>
+                  </div>
+                )}
+                {i === 5 && (
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="text-muted-foreground">SLA this week</span>
+                    <span className="font-medium text-emerald-600">98.2% ↑</span>
+                  </div>
                 )}
               </div>
-            ))}
-          </div>
 
-          {/* Mobile flow */}
-          <div className="flex flex-col items-center gap-3 md:hidden">
-            {nodes.map((node, i) => (
-              <div key={node.id} className="flex flex-col items-center">
-                <div
-                  className={`w-full max-w-xs rounded-xl border px-5 py-4 text-center shadow-[var(--shadow-card)] ${node.color}`}
-                >
-                  <p className="text-sm font-semibold">{node.label}</p>
-                  <p className="mt-1 text-xs opacity-70">{node.sublabel}</p>
-                </div>
-                {i < nodes.length - 1 && (
-                  <ArrowRight className="my-1 h-4 w-4 rotate-90 text-muted-foreground/40" />
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Return arrow label */}
-          <div className="mt-8 flex justify-center">
-            <div className="rounded-full border border-dashed border-muted-foreground/20 px-4 py-1.5 text-xs text-muted-foreground">
-              ↺ Continuous feedback loop
+              {i < steps.length - 1 && (
+                <ArrowRight className="absolute -right-3 top-1/2 hidden h-4 w-4 -translate-y-1/2 text-muted-foreground/30 lg:block" />
+              )}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
