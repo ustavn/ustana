@@ -285,6 +285,7 @@ export const translations = {
       rights: "© 2026 Usta, Inc. Bảo lưu mọi quyền.",
     },
   },
-} as const;
+};
 
 export type Translation = typeof translations.en;
+
