@@ -4,7 +4,7 @@ import { useI18n } from "@/i18n/I18nProvider";
 
 const Navbar = () => {
   const { t } = useI18n();
-  const items = [t.nav.platform, t.nav.dispatch, t.nav.pricing, t.nav.customers];
+  const items = [t.nav.platform, t.nav.dispatch, t.nav.pricing];
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="container mx-auto flex h-14 items-center justify-between px-6">
