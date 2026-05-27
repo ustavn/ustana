@@ -53,9 +53,17 @@ export const translations = {
       ],
     },
     workflow: {
-      title: "How Usta runs your service operations",
-      subtitle: "From the first customer request to the final payment — one connected workflow.",
+      title: "The operating system for service businesses",
+      subtitle: "A single platform connecting customers, technicians, and payments — with every interaction feeding the data loop.",
       stepLabel: "Step",
+      loopLabel: "Data loop",
+      nodes: [
+        { label: "Customer", desc: "Bookings from web, hotline, or chat into one queue." },
+        { label: "Platform OS", desc: "Routing, scheduling, and orchestration." },
+        { label: "Technician", desc: "Mobile app with jobs, checklists, and proof." },
+        { label: "Payment", desc: "Cash and online, invoiced and reconciled." },
+        { label: "Data", desc: "Every job loops back into smarter operations." },
+      ],
       steps: [
         { label: "Customer booking", desc: "Bookings come in from web, hotline, or Zalo into one queue.", preview: ["AC cleaning · Apt 8F", "New"] },
         { label: "Smart dispatch", desc: "Assign the right technician by skill, location, and availability.", preview: ["Suggested", "Minh T. · 1.2 km"] },
@@ -195,9 +203,17 @@ export const translations = {
       ],
     },
     workflow: {
-      title: "Usta vận hành dịch vụ của bạn như thế nào",
-      subtitle: "Từ yêu cầu đầu tiên của khách đến lúc thanh toán — một quy trình liền mạch.",
+      title: "Hệ điều hành cho doanh nghiệp dịch vụ",
+      subtitle: "Một nền tảng duy nhất kết nối khách hàng, kỹ thuật viên và thanh toán — mọi tương tác đều quay lại vòng lặp dữ liệu.",
       stepLabel: "Bước",
+      loopLabel: "Vòng lặp dữ liệu",
+      nodes: [
+        { label: "Khách hàng", desc: "Booking từ web, hotline hay chat về cùng một hàng đợi." },
+        { label: "Platform OS", desc: "Định tuyến, lập lịch và điều phối." },
+        { label: "Kỹ thuật viên", desc: "Ứng dụng di động với đơn, checklist và ảnh nghiệm thu." },
+        { label: "Thanh toán", desc: "Tiền mặt và online, xuất hóa đơn và đối soát tự động." },
+        { label: "Dữ liệu", desc: "Mọi đơn quay lại tinh chỉnh vận hành thông minh hơn." },
+      ],
       steps: [
         { label: "Khách đặt lịch", desc: "Booking từ web, hotline hay Zalo đều đổ về một hàng đợi duy nhất.", preview: ["Vệ sinh điều hòa · Căn 8F", "Mới"] },
         { label: "Điều phối thông minh", desc: "Phân công đúng kỹ thuật viên theo kỹ năng, vị trí và lịch trống.", preview: ["Gợi ý", "Minh T. · 1,2 km"] },
