@@ -1,6 +1,11 @@
 import { useI18n } from "@/i18n/I18nProvider";
+import kcAsset from "@/assets/kc.jpg.asset.json";
 
 const bgs = ["from-blue-100 to-blue-50", "from-emerald-100 to-emerald-50", "from-amber-100 to-amber-50", "from-violet-100 to-violet-50"];
+
+const photos: Record<string, string> = {
+  KC: kcAsset.url,
+};
 
 const Team = () => {
   const { t } = useI18n();
@@ -12,18 +17,29 @@ const Team = () => {
           <p className="text-muted-foreground">{t.team.subtitle}</p>
         </div>
         <div className="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {t.team.members.map((member, i) => (
-            <div key={member.name} className="rounded-xl border border-border bg-background p-5 text-center shadow-[var(--shadow-card)]">
-              <div className={`mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br ${bgs[i]}`}>
-                <span className="text-xl font-semibold text-foreground/70">
-                  {member.name.split(" ").map((n) => n[0]).join("")}
-                </span>
+          {t.team.members.map((member, i) => {
+            const photo = photos[member.name];
+            return (
+              <div key={member.name} className="rounded-xl border border-border bg-background p-5 text-center shadow-[var(--shadow-card)]">
+                {photo ? (
+                  <img
+                    src={photo}
+                    alt={member.name}
+                    className="mx-auto mb-4 h-20 w-20 rounded-full object-cover"
+                  />
+                ) : (
+                  <div className={`mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br ${bgs[i]}`}>
+                    <span className="text-xl font-semibold text-foreground/70">
+                      {member.name.split(" ").map((n) => n[0]).join("")}
+                    </span>
+                  </div>
+                )}
+                <p className="text-sm font-semibold text-foreground">{member.name}</p>
+                <p className="mt-0.5 text-xs text-primary">{member.role}</p>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{member.bio}</p>
               </div>
-              <p className="text-sm font-semibold text-foreground">{member.name}</p>
-              <p className="mt-0.5 text-xs text-primary">{member.role}</p>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{member.bio}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
