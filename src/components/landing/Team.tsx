@@ -16,31 +16,36 @@ const Team = () => {
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">{t.team.title}</h2>
           <p className="text-muted-foreground">{t.team.subtitle}</p>
         </div>
-        <div className="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-14 grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {t.team.members.map((member, i) => {
             const photo = photos[member.name];
             return (
-              <div key={member.name} className="rounded-xl border border-border bg-background p-5 text-center shadow-[var(--shadow-card)]">
-                {photo ? (
-                  <img
-                    src={photo}
-                    alt={member.name}
-                    className="mx-auto mb-4 h-14 w-14 rounded-full object-cover"
-                  />
-                ) : (
-                  <div className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br ${bgs[i]}`}>
-                    <span className="text-sm font-semibold text-foreground/70">
-                      {member.name.split(" ").map((n) => n[0]).join("")}
-                    </span>
-                  </div>
-                )}
-                <p className="text-sm font-semibold text-foreground">{member.name}</p>
-                <p className="mt-0.5 text-xs text-primary">{member.role}</p>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{member.bio}</p>
+              <div key={member.name} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-lg">
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-muted">
+                  {photo ? (
+                    <img
+                      src={photo}
+                      alt={member.name}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br ${bgs[i]}`}>
+                      <span className="text-5xl font-semibold text-foreground/40">
+                        {member.name.split(" ").map((n) => n[0]).join("")}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <p className="text-base font-semibold text-foreground">{member.name}</p>
+                  <p className="mt-1 text-xs font-medium uppercase tracking-wider text-primary">{member.role}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{member.bio}</p>
+                </div>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );
