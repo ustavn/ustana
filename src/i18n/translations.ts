@@ -73,10 +73,10 @@ export const translations = {
       title: "Built by operators",
       subtitle: "Founded by product leaders and operators with deep experience in hospitality, field operations, and large-scale service systems.",
       members: [
-        { name: "Linh Pham", role: "Co-founder, CEO", bio: "Operations leader with 10+ years of experience in services, hospitality, and real estate, managing large-scale operations in Ho Chi Minh City." },
-        { name: "KC", role: "Co-founder, Product", bio: "Built multi-layer SaaS platforms and operational systems for enterprise logistics and service businesses." },
-        { name: "Hien NT", role: "Co-founder, Operations", bio: "Operations and logistics specialist with years managing field services and optimizing workflows for service-based business models." },
-        { name: "Vu Huynh", role: "Co-founder, Engineering", bio: "Systems architect with experience building large-scale technology platforms and infrastructure, ensuring scalability and high reliability." },
+        { name: "Linh Pham", role: "Co-founder, CEO", bio: "10+ years managing operations in services, hospitality, and real estate." },
+        { name: "KC", role: "Co-founder, Product", bio: "Building and developing SaaS platforms for businesses." },
+        { name: "Hien NT", role: "Co-founder, Operations", bio: "Operations and logistics expert with experience managing large-scale services." },
+        { name: "Vu Huynh", role: "Co-founder, Engineering", bio: "Systems architect developing highly scalable technology platforms." },
       ],
     },
     finalCta: {
@@ -161,10 +161,10 @@ export const translations = {
       title: "Xây bởi người làm vận hành",
       subtitle: "Được sáng lập bởi đội ngũ sản phẩm và vận hành có kinh nghiệm sâu trong ngành dịch vụ, hospitality và hệ thống vận hành quy mô lớn.",
       members: [
-        { name: "Linh Pham", role: "Đồng sáng lập, CEO", bio: "Lãnh đạo vận hành với hơn 10 năm kinh nghiệm trong dịch vụ, khách sạn và bất động sản, quản lý các hoạt động vận hành quy mô lớn tại TP.HCM." },
-        { name: "KC", role: "Đồng sáng lập, Sản phẩm", bio: "Xây dựng các nền tảng SaaS và hệ thống đa tầng phục vụ vận hành, logistics và dịch vụ, với kinh nghiệm triển khai trong môi trường doanh nghiệp lớn." },
-        { name: "Hien NT", role: "Đồng sáng lập, Vận hành", bio: "Chuyên gia vận hành và logistics, nhiều năm quản lý dịch vụ hiện trường và tối ưu quy trình cho các mô hình kinh doanh dịch vụ." },
-        { name: "Vu Huynh", role: "Đồng sáng lập, Kỹ thuật", bio: "Kiến trúc sư hệ thống với kinh nghiệm phát triển các nền tảng công nghệ và hạ tầng quy mô lớn, đảm bảo khả năng mở rộng và độ tin cậy cao." },
+        { name: "Linh Pham", role: "Đồng sáng lập, CEO", bio: "Hơn 10 năm quản lý vận hành trong lĩnh vực dịch vụ, khách sạn và bất động sản." },
+        { name: "KC", role: "Đồng sáng lập, Sản phẩm", bio: "Xây dựng và phát triển các nền tảng SaaS cho doanh nghiệp." },
+        { name: "Hien NT", role: "Đồng sáng lập, Vận hành", bio: "Chuyên gia vận hành và logistics với kinh nghiệm quản lý dịch vụ quy mô lớn." },
+        { name: "Vu Huynh", role: "Đồng sáng lập, Kỹ thuật", bio: "Kiến trúc sư hệ thống, phát triển các nền tảng công nghệ có khả năng mở rộng cao." },
       ],
     },
     finalCta: {
