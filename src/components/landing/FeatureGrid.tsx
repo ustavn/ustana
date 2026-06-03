@@ -6,7 +6,7 @@ const icons = [CalendarDays, Radio, Users, Wallet, UserCircle, BarChart3];
 const FeatureGrid = () => {
   const { t } = useI18n();
   return (
-    <section className="container mx-auto px-6 py-24">
+    <section id="features" className="container mx-auto px-6 py-24">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
           Everything you need to run a{" "}

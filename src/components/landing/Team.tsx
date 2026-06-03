@@ -5,7 +5,7 @@ const bgs = ["from-blue-100 to-blue-50", "from-emerald-100 to-emerald-50", "from
 const Team = () => {
   const { t } = useI18n();
   return (
-    <section className="border-t border-border bg-card">
+    <section id="team" className="border-t border-border bg-card">
       <div className="container mx-auto px-6 py-24">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">{t.team.title}</h2>

@@ -8,7 +8,7 @@ const PlatformDiagram = () => {
   const w = t.workflow;
 
   return (
-    <section className="border-y border-border bg-background">
+    <section id="platform" className="border-y border-border bg-background">
       <div className="container mx-auto px-6 py-24">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground lg:text-4xl">

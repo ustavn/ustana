@@ -2,18 +2,37 @@ import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useI18n } from "@/i18n/I18nProvider";
 
+const navMap = [
+  { key: "platform", labelKey: "platform" as const },
+  { key: "features", labelKey: "dispatch" as const },
+  { key: "team", labelKey: "pricing" as const },
+];
+
 const Navbar = () => {
   const { t } = useI18n();
-  const items = [t.nav.platform, t.nav.dispatch, t.nav.pricing];
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="container mx-auto flex h-14 items-center justify-between px-6">
         <div className="flex items-center gap-8">
-          <span className="text-base font-bold tracking-widest text-foreground">USTA</span>
+          <a href="#" className="text-base font-bold tracking-widest text-foreground">USTA</a>
           <div className="hidden items-center gap-6 md:flex">
-            {items.map((item) => (
-              <a key={item} href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                {item}
+            {navMap.map((item) => (
+              <a
+                key={item.key}
+                href={`#${item.key}`}
+                onClick={(e) => handleScroll(e, item.key)}
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {t.nav[item.labelKey]}
               </a>
             ))}
           </div>
