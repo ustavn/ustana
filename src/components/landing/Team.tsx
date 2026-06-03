@@ -25,11 +25,11 @@ const Team = () => {
                   <img
                     src={photo}
                     alt={member.name}
-                    className="mx-auto mb-4 h-20 w-20 rounded-full object-cover"
+                    className="mx-auto mb-4 h-14 w-14 rounded-full object-cover"
                   />
                 ) : (
-                  <div className={`mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br ${bgs[i]}`}>
-                    <span className="text-xl font-semibold text-foreground/70">
+                  <div className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br ${bgs[i]}`}>
+                    <span className="text-sm font-semibold text-foreground/70">
                       {member.name.split(" ").map((n) => n[0]).join("")}
                     </span>
                   </div>
