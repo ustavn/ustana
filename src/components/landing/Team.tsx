@@ -1,10 +1,12 @@
 import { useI18n } from "@/i18n/I18nProvider";
 import kcAsset from "@/assets/kc.jpg.asset.json";
+import lpAsset from "@/assets/lp.jpg.asset.json";
 
 const bgs = ["from-blue-100 to-blue-50", "from-emerald-100 to-emerald-50", "from-amber-100 to-amber-50", "from-violet-100 to-violet-50"];
 
 const photos: Record<string, string> = {
   KC: kcAsset.url,
+  "Linh Pham": lpAsset.url,
 };
 
 const Team = () => {
