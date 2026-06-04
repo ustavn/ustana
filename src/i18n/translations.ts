@@ -151,6 +151,7 @@ export const translations = {
     },
     workflow: {
       title: "Hạ tầng thống nhất cho vận hành dịch vụ",
+      titlePrefix: "Hạ tầng thống nhất cho",
       titleAccent: "vận hành dịch vụ",
       subtitle: "Xây dựng, mở rộng và quản lý toàn bộ doanh nghiệp dịch vụ trên một nền tảng",
       coreTitle: "Platform Core",
