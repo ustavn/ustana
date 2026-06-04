@@ -13,8 +13,9 @@ const Index = () => {
       <Navbar />
       <Hero />
       <PlatformDiagram />
-      <FeatureGrid />
       <WhichServices />
+      <FeatureGrid />
+
       <Team />
       <FinalCTA />
       <Footer />
