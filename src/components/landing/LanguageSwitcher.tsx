@@ -6,7 +6,7 @@ const LanguageSwitcher = ({ className = "" }: { className?: string }) => {
   return (
     <div className={`inline-flex items-center gap-1 rounded-full border border-border bg-background p-0.5 ${className}`}>
       <Globe className="ml-2 h-3.5 w-3.5 text-muted-foreground" />
-      {(["en", "vi"] as const).map((l) => (
+      {(["vi", "en"] as const).map((l) => (
         <button
           key={l}
           type="button"

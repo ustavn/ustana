@@ -92,6 +92,38 @@ export const translations = {
     footer: {
       rights: "© 2026 Usta, Inc. All rights reserved.",
     },
+    dialogs: {
+      common: {
+        contactName: "Contact name",
+        title: "Mr / Ms",
+        titlePlaceholder: "Select title",
+        mr: "Mr",
+        ms: "Ms",
+        email: "Email",
+        phone: "Phone",
+        organization: "Organization",
+        business: "Business / Service",
+        location: "Location",
+        companySize: "Company size",
+        companySizePlaceholder: "Select size",
+        submit: "Submit",
+        submitting: "Submitting...",
+      },
+      requestDemo: {
+        title: "Request a Demo",
+        description: "Leave your info and the USTA team will contact you to arrange a demo.",
+        needs: "What would you like to see in the demo?",
+        needsPlaceholder: "Briefly describe the feature or workflow you want to see.",
+        toast: "Demo request sent. We'll be in touch soon!",
+      },
+      partner: {
+        title: "Partner With Us",
+        description: "Leave your info and the USTA team will reach out to discuss partnership opportunities.",
+        interest: "Partnership interest",
+        interestPlaceholder: "Briefly describe the type of partnership you're interested in.",
+        toast: "Partnership request sent. We'll be in touch soon!",
+      },
+    },
   },
   vi: {
     nav: {
@@ -183,6 +215,38 @@ export const translations = {
     },
     footer: {
       rights: "© 2026 Usta, Inc. Bảo lưu mọi quyền.",
+    },
+    dialogs: {
+      common: {
+        contactName: "Họ và tên",
+        title: "Xưng hô",
+        titlePlaceholder: "Chọn xưng hô",
+        mr: "Anh",
+        ms: "Chị",
+        email: "Email",
+        phone: "Số điện thoại",
+        organization: "Tên đơn vị / công ty",
+        business: "Lĩnh vực / dịch vụ",
+        location: "Khu vực",
+        companySize: "Quy mô",
+        companySizePlaceholder: "Chọn quy mô",
+        submit: "Gửi",
+        submitting: "Đang gửi...",
+      },
+      requestDemo: {
+        title: "Đặt Lịch Demo",
+        description: "Để lại thông tin, đội ngũ USTA sẽ liên hệ để sắp xếp buổi demo cho bạn.",
+        needs: "Nội dung bạn muốn xem demo",
+        needsPlaceholder: "Mô tả ngắn về tính năng / quy trình bạn muốn xem demo.",
+        toast: "Đã gửi yêu cầu demo. Chúng tôi sẽ liên hệ sớm!",
+      },
+      partner: {
+        title: "Hợp Tác Với Chúng Tôi",
+        description: "Để lại thông tin, đội ngũ USTA sẽ liên hệ để trao đổi cơ hội hợp tác.",
+        interest: "Hình thức hợp tác quan tâm",
+        interestPlaceholder: "Mô tả ngắn về hình thức hợp tác bạn quan tâm.",
+        toast: "Đã gửi yêu cầu hợp tác. Chúng tôi sẽ liên hệ sớm!",
+      },
     },
   },
 };

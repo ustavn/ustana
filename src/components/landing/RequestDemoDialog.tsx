@@ -20,6 +20,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
+import { useI18n } from "@/i18n/I18nProvider";
 
 interface Props {
   children: ReactNode;
@@ -38,6 +39,9 @@ const initialForm = {
 };
 
 const RequestDemoDialog = ({ children }: Props) => {
+  const { t } = useI18n();
+  const c = t.dialogs.common;
+  const d = t.dialogs.requestDemo;
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState(initialForm);
   const [submitting, setSubmitting] = useState(false);
@@ -48,9 +52,8 @@ const RequestDemoDialog = ({ children }: Props) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    // Placeholder: hook up email backend later
     await new Promise((r) => setTimeout(r, 500));
-    toast.success("Đã gửi yêu cầu demo. Chúng tôi sẽ liên hệ sớm!");
+    toast.success(d.toast);
     setForm(initialForm);
     setSubmitting(false);
     setOpen(false);
@@ -61,16 +64,14 @@ const RequestDemoDialog = ({ children }: Props) => {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle>Đặt Lịch Demo</DialogTitle>
-          <DialogDescription>
-            Để lại thông tin, đội ngũ USTA sẽ liên hệ để sắp xếp buổi demo cho bạn.
-          </DialogDescription>
+          <DialogTitle>{d.title}</DialogTitle>
+          <DialogDescription>{d.description}</DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="grid gap-4">
           <div className="grid gap-2">
             <Label htmlFor="contactName">
-              Contact name <span className="text-destructive">*</span>
+              {c.contactName} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="contactName"
@@ -82,7 +83,7 @@ const RequestDemoDialog = ({ children }: Props) => {
 
           <div className="grid gap-2">
             <Label htmlFor="title">
-              Mr / Ms <span className="text-destructive">*</span>
+              {c.title} <span className="text-destructive">*</span>
             </Label>
             <Select
               value={form.title}
@@ -90,11 +91,11 @@ const RequestDemoDialog = ({ children }: Props) => {
               required
             >
               <SelectTrigger id="title">
-                <SelectValue placeholder="Chọn xưng hô" />
+                <SelectValue placeholder={c.titlePlaceholder} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Mr">Mr</SelectItem>
-                <SelectItem value="Ms">Ms</SelectItem>
+                <SelectItem value="Mr">{c.mr}</SelectItem>
+                <SelectItem value="Ms">{c.ms}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -102,7 +103,7 @@ const RequestDemoDialog = ({ children }: Props) => {
           <div className="grid gap-2 sm:grid-cols-2">
             <div className="grid gap-2">
               <Label htmlFor="email">
-                Email <span className="text-destructive">*</span>
+                {c.email} <span className="text-destructive">*</span>
               </Label>
               <Input
                 id="email"
@@ -114,7 +115,7 @@ const RequestDemoDialog = ({ children }: Props) => {
             </div>
             <div className="grid gap-2">
               <Label htmlFor="phone">
-                Phone <span className="text-destructive">*</span>
+                {c.phone} <span className="text-destructive">*</span>
               </Label>
               <Input
                 id="phone"
@@ -128,7 +129,7 @@ const RequestDemoDialog = ({ children }: Props) => {
 
           <div className="grid gap-2">
             <Label htmlFor="organization">
-              Organization <span className="text-destructive">*</span>
+              {c.organization} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="organization"
@@ -140,7 +141,7 @@ const RequestDemoDialog = ({ children }: Props) => {
 
           <div className="grid gap-2">
             <Label htmlFor="business">
-              Business / Service <span className="text-destructive">*</span>
+              {c.business} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="business"
@@ -152,7 +153,7 @@ const RequestDemoDialog = ({ children }: Props) => {
 
           <div className="grid gap-2 sm:grid-cols-2">
             <div className="grid gap-2">
-              <Label htmlFor="location">Location</Label>
+              <Label htmlFor="location">{c.location}</Label>
               <Input
                 id="location"
                 value={form.location}
@@ -160,13 +161,13 @@ const RequestDemoDialog = ({ children }: Props) => {
               />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="companySize">Company size</Label>
+              <Label htmlFor="companySize">{c.companySize}</Label>
               <Select
                 value={form.companySize}
                 onValueChange={(v) => set("companySize", v)}
               >
                 <SelectTrigger id="companySize">
-                  <SelectValue placeholder="Chọn quy mô" />
+                  <SelectValue placeholder={c.companySizePlaceholder} />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="1-10">1-10</SelectItem>
@@ -180,19 +181,19 @@ const RequestDemoDialog = ({ children }: Props) => {
           </div>
 
           <div className="grid gap-2">
-            <Label htmlFor="demoNeeds">Thing you want to demo</Label>
+            <Label htmlFor="demoNeeds">{d.needs}</Label>
             <Textarea
               id="demoNeeds"
               rows={3}
               value={form.demoNeeds}
               onChange={(e) => set("demoNeeds", e.target.value)}
-              placeholder="Mô tả ngắn về tính năng / quy trình bạn muốn xem demo"
+              placeholder={d.needsPlaceholder}
             />
           </div>
 
           <DialogFooter>
             <Button type="submit" disabled={submitting} className="w-full sm:w-auto">
-              {submitting ? "Đang gửi..." : "Submit"}
+              {submitting ? c.submitting : c.submit}
             </Button>
           </DialogFooter>
         </form>
