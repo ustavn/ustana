@@ -58,7 +58,7 @@ export const translations = {
         { v: "60%", l: "Fewer missed appointments" },
       ],
     },
-    outcomes: {
+    serviceModels: {
       title: "Built for real field operations",
       subtitle: "Operational outcomes measured across service teams running on Usta.",
       items: [
@@ -146,15 +146,19 @@ export const translations = {
         { v: "60%", l: "Giảm lỡ lịch hẹn" },
       ],
     },
-    outcomes: {
-      title: "Xây cho vận hành hiện trường thật sự",
-      subtitle: "Các chỉ số vận hành thực tế đo được từ các đội dịch vụ đang dùng Usta.",
+    serviceModels: {
+      title: "Phù hợp với nhiều mô hình dịch vụ",
+      subtitle: "Từ cá nhân cung cấp dịch vụ đến doanh nghiệp vận hành đội ngũ hiện trường.",
       items: [
-        { label: "Giảm thời gian điều phối", value: "−35%", desc: "Từ gọi điện vài phút xuống còn một chạm phân công." },
-        { label: "Tăng hiệu suất kỹ thuật viên", value: "+28%", desc: "Ít giờ chết hơn, lộ trình giữa các đơn thông minh hơn." },
-        { label: "Giảm lỡ lịch hẹn", value: "−60%", desc: "Nhắc lịch tự động và cập nhật ETA theo thời gian thực." },
-        { label: "Đối soát thanh toán nhanh hơn", value: "−4 ngày", desc: "Tiền mặt, chuyển khoản và hóa đơn về cùng một sổ." },
-        { label: "Hiển thị vận hành thời gian thực", value: "24/7", desc: "Mọi đơn, kỹ thuật viên và thanh toán trong một màn hình." },
+        { label: "Dọn dẹp & vệ sinh" },
+        { label: "Sửa chữa & bảo trì kỹ thuật" },
+        { label: "Điện lạnh & gia dụng" },
+        { label: "Điện nước dân dụng" },
+        { label: "Chăm sóc người cao tuổi & tại nhà" },
+        { label: "Beauty & Wellness" },
+        { label: "Yoga, Fitness & Huấn luyện cá nhân" },
+        { label: "Chăm sóc cây cảnh & sân vườn" },
+        { label: "Chăm sóc thú cưng" },
       ],
     },
     team: {
