@@ -26,6 +26,7 @@ export const translations = {
     },
     workflow: {
       title: "A unified infrastructure for service operations",
+      titlePrefix: "A unified infrastructure for",
       titleAccent: "service operations",
       subtitle: "Build, scale, and manage your entire service business on a single platform",
       coreTitle: "Platform Core",
