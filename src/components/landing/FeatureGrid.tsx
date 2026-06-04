@@ -9,7 +9,7 @@ const FeatureGrid = () => {
     <section id="features" className="container mx-auto px-6 py-24">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground lg:text-4xl">
-          Everything you need to run a{" "}
+          {t.features.titlePrefix}{" "}
           <span className="text-primary">{t.features.titleAccent}</span>
         </h2>
         <p className="text-muted-foreground">{t.features.subtitle}</p>
