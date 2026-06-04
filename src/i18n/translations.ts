@@ -164,6 +164,7 @@ export const translations = {
     },
     features: {
       title: "Tất cả những gì bạn cần cho doanh nghiệp dịch vụ hiện đại",
+      titlePrefix: "Tất cả những gì bạn cần cho",
       titleAccent: "doanh nghiệp dịch vụ hiện đại",
       subtitle: "Sáu module mạnh mẽ phối hợp như một nền tảng duy nhất.",
       items: [
