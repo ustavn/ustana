@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useI18n } from "@/i18n/I18nProvider";
+import RequestDemoDialog from "./RequestDemoDialog";
 
 const navMap = [
   { key: "platform", labelKey: "platform" as const },
