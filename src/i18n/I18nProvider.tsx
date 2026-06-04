@@ -14,8 +14,7 @@ function detectInitial(): Locale {
   if (typeof window === "undefined") return "en";
   const stored = window.localStorage.getItem(STORAGE_KEY) as Locale | null;
   if (stored === "en" || stored === "vi") return stored;
-  const nav = window.navigator.language?.toLowerCase() ?? "";
-  return nav.startsWith("vi") ? "vi" : "en";
+  return "vi";
 }
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
