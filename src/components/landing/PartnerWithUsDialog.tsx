@@ -20,6 +20,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
+import { useI18n } from "@/i18n/I18nProvider";
 
 interface Props {
   children: ReactNode;
@@ -38,6 +39,9 @@ const initialForm = {
 };
 
 const PartnerWithUsDialog = ({ children }: Props) => {
+  const { t } = useI18n();
+  const c = t.dialogs.common;
+  const d = t.dialogs.partner;
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState(initialForm);
   const [submitting, setSubmitting] = useState(false);
@@ -48,9 +52,8 @@ const PartnerWithUsDialog = ({ children }: Props) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    // Placeholder: hook up email backend later
     await new Promise((r) => setTimeout(r, 500));
-    toast.success("Đã gửi yêu cầu hợp tác. Chúng tôi sẽ liên hệ sớm!");
+    toast.success(d.toast);
     setForm(initialForm);
     setSubmitting(false);
     setOpen(false);
@@ -61,16 +64,14 @@ const PartnerWithUsDialog = ({ children }: Props) => {
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle>Hợp Tác Với Chúng Tôi</DialogTitle>
-          <DialogDescription>
-            Để lại thông tin, đội ngũ USTA sẽ liên hệ để trao đổi cơ hội hợp tác.
-          </DialogDescription>
+          <DialogTitle>{d.title}</DialogTitle>
+          <DialogDescription>{d.description}</DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="grid gap-4">
           <div className="grid gap-2">
             <Label htmlFor="partnerContactName">
-              Contact name <span className="text-destructive">*</span>
+              {c.contactName} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="partnerContactName"
@@ -82,7 +83,7 @@ const PartnerWithUsDialog = ({ children }: Props) => {
 
           <div className="grid gap-2">
             <Label htmlFor="partnerTitle">
-              Mr / Ms <span className="text-destructive">*</span>
+              {c.title} <span className="text-destructive">*</span>
             </Label>
             <Select
               value={form.title}
@@ -90,11 +91,11 @@ const PartnerWithUsDialog = ({ children }: Props) => {
               required
             >
               <SelectTrigger id="partnerTitle">
-                <SelectValue placeholder="Chọn xưng hô" />
+                <SelectValue placeholder={c.titlePlaceholder} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Mr">Mr</SelectItem>
-                <SelectItem value="Ms">Ms</SelectItem>
+                <SelectItem value="Mr">{c.mr}</SelectItem>
+                <SelectItem value="Ms">{c.ms}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -102,7 +103,7 @@ const PartnerWithUsDialog = ({ children }: Props) => {
           <div className="grid gap-2 sm:grid-cols-2">
             <div className="grid gap-2">
               <Label htmlFor="partnerEmail">
-                Email <span className="text-destructive">*</span>
+                {c.email} <span className="text-destructive">*</span>
               </Label>
               <Input
                 id="partnerEmail"
@@ -114,7 +115,7 @@ const PartnerWithUsDialog = ({ children }: Props) => {
             </div>
             <div className="grid gap-2">
               <Label htmlFor="partnerPhone">
-                Phone <span className="text-destructive">*</span>
+                {c.phone} <span className="text-destructive">*</span>
               </Label>
               <Input
                 id="partnerPhone"
@@ -128,7 +129,7 @@ const PartnerWithUsDialog = ({ children }: Props) => {
 
           <div className="grid gap-2">
             <Label htmlFor="partnerOrganization">
-              Organization <span className="text-destructive">*</span>
+              {c.organization} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="partnerOrganization"
@@ -140,7 +141,7 @@ const PartnerWithUsDialog = ({ children }: Props) => {
 
           <div className="grid gap-2">
             <Label htmlFor="partnerBusiness">
-              Business / Service <span className="text-destructive">*</span>
+              {c.business} <span className="text-destructive">*</span>
             </Label>
             <Input
               id="partnerBusiness"
@@ -152,7 +153,7 @@ const PartnerWithUsDialog = ({ children }: Props) => {
 
           <div className="grid gap-2 sm:grid-cols-2">
             <div className="grid gap-2">
-              <Label htmlFor="partnerLocation">Location</Label>
+              <Label htmlFor="partnerLocation">{c.location}</Label>
               <Input
                 id="partnerLocation"
                 value={form.location}
@@ -160,13 +161,13 @@ const PartnerWithUsDialog = ({ children }: Props) => {
               />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="partnerCompanySize">Company size</Label>
+              <Label htmlFor="partnerCompanySize">{c.companySize}</Label>
               <Select
                 value={form.companySize}
                 onValueChange={(v) => set("companySize", v)}
               >
                 <SelectTrigger id="partnerCompanySize">
-                  <SelectValue placeholder="Chọn quy mô" />
+                  <SelectValue placeholder={c.companySizePlaceholder} />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="1-10">1-10</SelectItem>
@@ -180,21 +181,19 @@ const PartnerWithUsDialog = ({ children }: Props) => {
           </div>
 
           <div className="grid gap-2">
-            <Label htmlFor="partnerPartnershipInterest">
-              Partnership interest
-            </Label>
+            <Label htmlFor="partnerPartnershipInterest">{d.interest}</Label>
             <Textarea
               id="partnerPartnershipInterest"
               rows={3}
               value={form.partnershipInterest}
               onChange={(e) => set("partnershipInterest", e.target.value)}
-              placeholder="Mô tả ngắn về hình thức hợp tác bạn quan tâm"
+              placeholder={d.interestPlaceholder}
             />
           </div>
 
           <DialogFooter>
             <Button type="submit" disabled={submitting} className="w-full sm:w-auto">
-              {submitting ? "Đang gửi..." : "Submit"}
+              {submitting ? c.submitting : c.submit}
             </Button>
           </DialogFooter>
         </form>
