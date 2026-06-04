@@ -92,6 +92,38 @@ export const translations = {
     footer: {
       rights: "© 2026 Usta, Inc. All rights reserved.",
     },
+    dialogs: {
+      common: {
+        contactName: "Contact name",
+        title: "Mr / Ms",
+        titlePlaceholder: "Select title",
+        mr: "Mr",
+        ms: "Ms",
+        email: "Email",
+        phone: "Phone",
+        organization: "Organization",
+        business: "Business / Service",
+        location: "Location",
+        companySize: "Company size",
+        companySizePlaceholder: "Select size",
+        submit: "Submit",
+        submitting: "Submitting...",
+      },
+      requestDemo: {
+        title: "Request a Demo",
+        description: "Leave your info and the USTA team will contact you to arrange a demo.",
+        needs: "What would you like to see in the demo?",
+        needsPlaceholder: "Briefly describe the feature or workflow you want to see.",
+        toast: "Demo request sent. We'll be in touch soon!",
+      },
+      partner: {
+        title: "Partner With Us",
+        description: "Leave your info and the USTA team will reach out to discuss partnership opportunities.",
+        interest: "Partnership interest",
+        interestPlaceholder: "Briefly describe the type of partnership you're interested in.",
+        toast: "Partnership request sent. We'll be in touch soon!",
+      },
+    },
   },
   vi: {
     nav: {
