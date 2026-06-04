@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, User, Cpu, Wrench, CreditCard } from "lucide-react";
 import { useI18n } from "@/i18n/I18nProvider";
 import RequestDemoDialog from "./RequestDemoDialog";
+import PartnerWithUsDialog from "./PartnerWithUsDialog";
 
 const icons = [User, Cpu, Wrench, CreditCard];
 
@@ -29,10 +30,12 @@ const Hero = () => {
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </RequestDemoDialog>
-              <Button variant="hero-outline" size="lg">
-                <Play className="mr-1 h-4 w-4" />
-                {h.ctaSecondary}
-              </Button>
+              <PartnerWithUsDialog>
+                <Button variant="hero-outline" size="lg">
+                  <Play className="mr-1 h-4 w-4" />
+                  {h.ctaSecondary}
+                </Button>
+              </PartnerWithUsDialog>
             </div>
           </div>
 
