@@ -11,11 +11,12 @@ const FinalCTA = () => {
         <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">{t.finalCta.title}</h2>
         <p className="mb-8 text-muted-foreground">{t.finalCta.subtitle}</p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button variant="hero" size="lg">
-            {t.finalCta.primary}
-            <ArrowRight className="ml-1 h-4 w-4" />
-          </Button>
-          <Button variant="hero-outline" size="lg">{t.finalCta.secondary}</Button>
+          <RequestDemoDialog>
+            <Button variant="hero" size="lg">
+              {t.finalCta.primary}
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </Button>
+          </RequestDemoDialog>
         </div>
       </div>
     </section>
