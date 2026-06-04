@@ -26,6 +26,7 @@ export const translations = {
     },
     workflow: {
       title: "A unified infrastructure for service operations",
+      titlePrefix: "A unified infrastructure for",
       titleAccent: "service operations",
       subtitle: "Build, scale, and manage your entire service business on a single platform",
       coreTitle: "Platform Core",
@@ -37,6 +38,7 @@ export const translations = {
     },
     features: {
       title: "Everything you need to run a modern service business",
+      titlePrefix: "Everything you need to run a",
       titleAccent: "modern service business",
       subtitle: "Six powerful modules working together as one platform.",
       items: [
@@ -150,6 +152,7 @@ export const translations = {
     },
     workflow: {
       title: "Hạ tầng thống nhất cho vận hành dịch vụ",
+      titlePrefix: "Hạ tầng thống nhất cho",
       titleAccent: "vận hành dịch vụ",
       subtitle: "Xây dựng, mở rộng và quản lý toàn bộ doanh nghiệp dịch vụ trên một nền tảng",
       coreTitle: "Platform Core",
@@ -161,6 +164,7 @@ export const translations = {
     },
     features: {
       title: "Tất cả những gì bạn cần cho doanh nghiệp dịch vụ hiện đại",
+      titlePrefix: "Tất cả những gì bạn cần cho",
       titleAccent: "doanh nghiệp dịch vụ hiện đại",
       subtitle: "Sáu module mạnh mẽ phối hợp như một nền tảng duy nhất.",
       items: [
