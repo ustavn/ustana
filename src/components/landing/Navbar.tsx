@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useI18n } from "@/i18n/I18nProvider";
+import RequestDemoDialog from "./RequestDemoDialog";
 
 const navMap = [
   { key: "platform", labelKey: "platform" as const },
@@ -40,7 +41,9 @@ const Navbar = () => {
         <div className="flex items-center gap-2 md:gap-3">
           <LanguageSwitcher className="hidden sm:inline-flex" />
           <Button variant="ghost" size="sm" className="hidden sm:inline-flex">{t.nav.signIn}</Button>
-          <Button size="sm">{t.nav.getStarted}</Button>
+          <RequestDemoDialog>
+            <Button size="sm">{t.nav.getStarted}</Button>
+          </RequestDemoDialog>
         </div>
       </div>
       <div className="flex items-center justify-end gap-2 border-t border-border px-6 py-2 sm:hidden">

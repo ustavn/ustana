@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, User, Cpu, Wrench, CreditCard } from "lucide-react";
 import { useI18n } from "@/i18n/I18nProvider";
+import RequestDemoDialog from "./RequestDemoDialog";
 
 const icons = [User, Cpu, Wrench, CreditCard];
 
@@ -22,10 +23,12 @@ const Hero = () => {
             </h1>
             <p className="mb-8 text-lg leading-relaxed text-muted-foreground">{h.subtitle}</p>
             <div className="flex flex-wrap gap-3">
-              <Button variant="hero" size="lg">
-                {h.ctaPrimary}
-                <ArrowRight className="ml-1 h-4 w-4" />
-              </Button>
+              <RequestDemoDialog>
+                <Button variant="hero" size="lg">
+                  {h.ctaPrimary}
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              </RequestDemoDialog>
               <Button variant="hero-outline" size="lg">
                 <Play className="mr-1 h-4 w-4" />
                 {h.ctaSecondary}
