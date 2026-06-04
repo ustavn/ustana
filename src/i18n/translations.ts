@@ -38,6 +38,7 @@ export const translations = {
     },
     features: {
       title: "Everything you need to run a modern service business",
+      titlePrefix: "Everything you need to run a",
       titleAccent: "modern service business",
       subtitle: "Six powerful modules working together as one platform.",
       items: [
