@@ -17,6 +17,7 @@ const FinalCTA = () => {
               <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </RequestDemoDialog>
+          <Button variant="hero-outline" size="lg">{t.finalCta.secondary}</Button>
         </div>
       </div>
     </section>
