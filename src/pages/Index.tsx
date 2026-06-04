@@ -2,7 +2,6 @@ import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
 import PlatformDiagram from "@/components/landing/PlatformDiagram";
 import FeatureGrid from "@/components/landing/FeatureGrid";
-import Metrics from "@/components/landing/Metrics";
 import MarketSize from "@/components/landing/MarketSize";
 import Team from "@/components/landing/Team";
 import FinalCTA from "@/components/landing/FinalCTA";
@@ -15,7 +14,6 @@ const Index = () => {
       <Hero />
       <PlatformDiagram />
       <FeatureGrid />
-      <Metrics />
       <MarketSize />
       <Team />
       <FinalCTA />
