@@ -14,12 +14,7 @@ const Team = () => {
         <div className="mx-auto mt-14 grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {t.team.members.map((member, i) => (
             <div key={member.name} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-lg">
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-muted">
-                <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br ${bgs[i]}`}>
-                  <span className="text-5xl font-semibold text-foreground/40">
-                    {member.name.split(" ").map((n) => n[0]).join("")}
-                  </span>
-                </div>
+              
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <p className="text-base font-semibold text-foreground">{member.name}</p>
