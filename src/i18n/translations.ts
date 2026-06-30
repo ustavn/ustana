@@ -225,7 +225,7 @@ export const translations = {
           bio: "Hơn 10 năm quản lý vận hành trong lĩnh vực dịch vụ, khách sạn và bất động sản.",
         },
         {
-          name: "KC",
+          name: "Kim Chi",
           role: "Đồng sáng lập, Sản phẩm",
           bio: "Xây dựng và phát triển các nền tảng SaaS cho doanh nghiệp.",
         },
